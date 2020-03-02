@@ -1,0 +1,28 @@
+import random
+counter = 0
+target = random.randint(100,120)
+print('100~120 사이 숫자 맞추기')
+
+while True:
+    guess = int(input('숫자를 맞춰보세요: \n> '))
+    if guess == int(target):
+        print('정답!')
+        break
+        
+    elif guess > int(target):
+        print('그거보다 작아요. 남은 도전 횟수는 %d번, 다시 맞춰보세요.\n' % (9-counter))
+        counter = counter+1
+
+    elif counter == 9:
+        print('바보~ 엄청 못하네~ 이제 그만하죠')
+        break           
+        
+    else:
+        print('그거보다 커요. 남은 도전 횟수는 %d번, 다시 맞춰보세요.\n' % (9-counter))
+        counter = counter+1
+        
+if(counter == 0):
+    print('\n우와 한번에 맞추다니~로또사도 되겠네요')
+        
+if(counter <= 2):
+    print('\n빨리 맞추다니 잘했네요')
