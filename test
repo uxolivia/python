@@ -1,0 +1,10 @@
+<과제 1> 
+
+def test(x, y):
+    if x > y:
+        return 0
+    
+    if y > x:
+        return 1
+    
+test(3,5)
