@@ -1,0 +1,24 @@
+import random
+
+game = random.sample(range(1,10),3)
+
+strike = 0   
+ball = 0   
+
+print('야구게임 시작')
+
+while(strike < 3):
+    guess = str(input("3자리 숫자를 입력하세요: "))
+    strike = 0
+    ball = 0
+
+    for i in range(0,3):
+        for u in range(0,3):
+            if(guess[i] == str(game[u]) and i == u):
+                strike +=1
+            elif(guess[i] == str(game[u]) and i != u):
+                ball +=1
+
+    print("{0} strike, {1} ball".format(strike,ball))
+  
+print("홈런!!!")
