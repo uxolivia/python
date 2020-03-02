@@ -1,4 +1,4 @@
-<과제 1> 
+# 과제 1
 
 def test(x, y):
     if x > y:
