@@ -28,11 +28,11 @@ if situation == 'win':
 while situation != 'win':
     
     if situation == 'low': 
-        quiz = int(input('숫자가 낮아요. \n\n다시 맞춰보세요(%d번째 시도): \n> ' % (counter+1)))
+        quiz = int(input('숫자가 낮아요. 높여보세요~ \n\n다시 맞춰보세요(%d번째 시도): \n> ' % (counter+1)))
         counter = counter + 1
         
     else:
-        quiz = int(input('숫자가 높아요. \n\n다시 맞춰보세요(%d번째 시도): \n> ' % (counter+1)))
+        quiz = int(input('숫자가 높아요. 낮춰보세요~ \n\n다시 맞춰보세요(%d번째 시도): \n> ' % (counter+1)))
         counter = counter+1
         
     situation = test(answer, quiz)
