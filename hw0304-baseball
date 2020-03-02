@@ -2,8 +2,8 @@ import random
 
 game = random.sample(range(1,10),3)
 
-strike = 0   # 스트라이크 갯수
-ball = 0   # 볼 갯수
+strike = 0   
+ball = 0   
 
 print('야구게임 시작')
 
