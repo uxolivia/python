@@ -20,6 +20,5 @@ while(strike < 3):
                 ball +=1
 
     print("{0} strike, {1} ball".format(strike,ball))
-    tried +=1
-
+  
 print("홈런!!!")
