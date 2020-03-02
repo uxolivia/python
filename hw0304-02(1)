@@ -1,0 +1,49 @@
+#def 함수 사용한 것
+
+import random
+counter = 1
+answer = random.randint(100,120)
+print('100~120 사이의 세자리 수 맞추기~ 도전 10번을 넘기면 비웃을겁니다.\n')
+
+
+def test(goal, number):  
+    
+    if goal == number:
+        result ='win'
+        
+    elif goal < number:
+        result = 'high'
+            
+    else:
+        result = 'low'
+        
+    return result
+    
+quiz = int(input('숫자를 맞춰보세요: \n> '))
+situation = test(answer, quiz)
+
+if situation == 'win':
+    print('정답!')
+
+while situation != 'win':
+    
+    if situation == 'low': 
+        quiz = int(input('숫자가 낮아요. \n\n다시 맞춰보세요(%d번째 시도): \n> ' % (counter+1)))
+        counter = counter + 1
+        
+    else:
+        quiz = int(input('숫자가 높아요. \n\n다시 맞춰보세요(%d번째 시도): \n> ' % (counter+1)))
+        counter = counter+1
+        
+    situation = test(answer, quiz)
+
+if(counter == 1):
+    print('우와~ 로또사도 되겠네요')
+        
+if(counter <= 3 and counter > 0):
+    print('\n빨리 맞추다니 잘했네요')
+        
+if(counter > 10):
+    print('\n우헤헤헤 너무 못한당')
+    
+print("당신은",counter,"번 도전해서 맞추었습니다.")
