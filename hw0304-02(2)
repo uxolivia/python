@@ -1,0 +1,36 @@
+import random
+counter = 0
+answer = 0
+    
+answer = random.randint(100,120)
+print('100~120 사이의 세자리 수 맞추기~ 도전 10번을 넘기면 비웃을겁니다.\n')
+
+#실제 도전해보기로, 정답정하지 않고 맞추기
+    
+    
+test = int(input('숫자를 맞춰보세요: \n> '))
+    
+for i in range(0,10):
+    counter = counter+1
+        
+    if(answer==test):
+        print(counter, '번 만에 맞췄네요')
+        break
+            
+    else:
+        if(answer > test):
+            print('그거보다는 커요')
+            
+        if(answer < test):
+            print('그거보다는 작아요')
+         
+    test = int(input('다시 맞춰보세요: \n> '))       
+    
+if counter == 1:
+    print('우와~로또사셔도 되겠어요')
+        
+elif(counter <= 3):
+    print('빨리 맞추다니 잘했네요')
+        
+elif(counter >= 10):
+        print('우헤헤헤 너무 못한당')
